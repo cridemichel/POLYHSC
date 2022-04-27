@@ -1,0 +1,12 @@
+**/Session.vim
+**/*.swp
+**/*.fdb_latexmk
+**/*.log
+**/*.bbl
+**/*.synctex.gz
+**/*.fls
+**/*.pdf
+**/*.aux
+**/*.blg
+**/.viminfo
+**/.DS_Store
