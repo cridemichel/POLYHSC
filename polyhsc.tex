@@ -13,7 +13,7 @@
 %% servers.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
-\usepackage{comment}
+\usepackage{comment,amsmath,color}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
@@ -129,47 +129,95 @@
 
 Design and synthesis of colloidal particles of various sizes, shapes, morphologies and functionalisations is a field that has flourished unprecedentedly over the last decades~\cite{Hueckel2021,Sacanna2013,Manoharan2015,Glotzer2007}. 
 
-Nanoparticles have seen  important applications in the field of drug delivery [CITA], where functionalised particles can be designed  to release a cargo upon external stimuli, or to attach to specific regions of the cells. Spanning to a completely different field, nanoparticles can be exploited due to their plasmonic resonance [CITA], that has important applications in optoelectronical devices [CITA], or they can be used as a model system  for a variety of complex biological assemblies such as viruses, bacteria or DNA composites [CITA]. 
+% Nanoparticles have seen  important applications in the field of drug delivery [CITA], where functionalised particles can be designed  to release a cargo upon external stimuli, or to attach to specific regions of the cells. Spanning to a completely different field, nanoparticles can be exploited due to their plasmonic resonance [CITA], that has important applications in optoelectronical devices [CITA], or they can be used as a model system  for a variety of complex biological assemblies such as viruses, bacteria or DNA composites [CITA]. 
 
 %FRASE SULLA SHAPE e SU FASI LC
 {\color{green}A particularly interesting class of colloids is constituted by nanoparticles of anisotropic shape, whose
-phase diagram is enriched by mesophases such as nematic, smectic, uniaxial columnar phases among many other ones.
-Prominent examples of elongated particles are provided by fibers and fibrils of peptides and proteins~\cite{Mezzenga2018,DeMichele2019,DeMichele2021},
-... % ADD FURTHER EXAMPLES
-}
-Amongst elongated nanoparticles, gold nanorods (AuNRs) have proven to be extremely successful when medical applications
-are foreseen, due to their high  biocompatibility and simple and versatile synthesis. Moreover, the anysotropy  of the
-nanoparticles provides a longitudinal plasmon resonance band (LPR) which can be modulated - through the anysotropy - in % COMMENT: too many details for intro?
-the Near InfraRed window (NIR: 800-1200 nm zone). Such a property renders the nanoparticles extremely suitable for
-biomedical purposes: it is in fact possible to inject nanoparticles in biological systems, drive them to target
-locations and exploit their reactivity in the NIR, without causing any interference on healthy tissues and organs as
-water has a high transmittance (low absorption) in such a spectral region.
-% TODO: up here
-Nanoparticles can thus be excited, and used as contrast agents or innovative therapeutic tool exploiting the localized increase 
-in temperature upon laser irradiation for the selective destruction of cancer cells.
+  phase diagram is enriched by mesophases such as nematic, smectic, uniaxial columnar phases among many other ones.
+  These mesophases emerge in different living systems and has been widely exploited in materials science and
+  biotechnology-  Prominent examples of anistropic colloids are provided by fd-viruses~(Z. Dogic and S. Fraden,
+  Langmuir, 2000, 16, 7820–7824), DNA duplexes~(Mine with Stiakakis 2021), cellulose nanocrystals (P. X. Wang, W. Y.
+  Hamad and M. J. MacLachlan, Nat. Commun., 2016, 7, 11515), polypeptides (XXX), amyloid fibrils (G. Nystrom, M. Arcari
+  and R. Mezzenga, Nat. Nanotechnol., 2018, 13, 330–336), collagen (R. Martin, J. Farjanel, D. Eichenberger, A.
+Colige, E. Kessler, D. J. S. Hulmes and M. M. Giraud-Guille, J. Mol. Biol., 2000, 301, 11–17)} and gold nanorods
+(AuNRs). Latter ones have proven to be extremely successful when
+medical applications are foreseen, due to their high  biocompatibility and simple 
+and versatile synthesis. 
 
+% Moreover, the anysotropy  of the
+% nanoparticles provides a longitudinal plasmon resonance band (LPR) which can be modulated - through the anysotropy - in % COMMENT: too many details for intro?
+% the Near InfraRed window (NIR: 800-1200 nm zone). Such a property renders the nanoparticles extremely suitable for
+% biomedical purposes: it is in fact possible to inject nanoparticles in biological systems, drive them to target
+% locations and exploit their reactivity in the NIR, without causing any interference on healthy tissues and organs as
+% water has a high transmittance (low absorption) in such a spectral region.
+% % TODO: up here
+% Nanoparticles can thus be excited, and used as contrast agents or innovative therapeutic tool exploiting the localized increase 
+% in temperature upon laser irradiation for the selective destruction of cancer cells.
 
-The preparation of  nanomaterials with defined shape and functionalisation, requires  control on the synthetic process. This implies control on the kinetic pathway (nucleation and growth of the particles) and on the equilibrium thermodynamic properties, that drive the precipitation of the solid, and the stability of given crystalline structures. 
-A miscontrol over the synthesis process, might lead to unwanted aggregation events, or to an eventual instability of the resulting nanoparticles; this in turn affects the size distribution of the final nanoparticles, rendering the synthesised material unusable for any specific application.
+The preparation of  nanomaterials with defined shape and functionalisation, requires  control on the synthetic process.
+This implies control on the kinetic pathway (nucleation and growth of the particles) and on the equilibrium
+thermodynamic properties, that drive the precipitation of the solid, and the stability of given crystalline structures. 
+A miscontrol over the synthesis process, might lead to unwanted aggregation events, or to an eventual instability of the
+resulting nanoparticles; this in turn affects the size distribution of the final nanoparticles, rendering the
+synthesised material unusable for any specific application.
 
 %In fact, both optoelectronic and biomedical applications require control on the self-assembly process, rendering size and shape control as fundamental and critical factors for a reliable use of any specific nanomaterial. 
 
-Nevertheless, even in the most controlled synthetic process, nanoparticles are always characterised by a given polydispersity. For this reason, unveiling a path that would allow for a control over the equilibrium properties of solutions of polydisperse nanoparticles, while understanding the effects of such an unavoidable drawback on the final properties of the nanocomposites, is a fundamental step for the usage of every synthesised nanomaterial.
+Nevertheless, even in the most controlled synthetic process, nanoparticles are always characterised by a given
+polydispersity. For this reason, unveiling a path that would allow for a control over the equilibrium properties of
+solutions of polydisperse nanoparticles, while understanding the effects of such an unavoidable drawback on the final
+properties of the nanocomposites, is a fundamental step for the usage of every synthesised nanomaterial.
 
+In this work we aim at assessing the effect of polydispersity of elongated mesogenic nanoparticles on their phase behavior
+by studying a simple prototypical systems constituted of polydisperse hard spherocylinders (HSCs). 
+For an extensive exploration, colloids are defined by means of their elongation  $L$ and their diameter $D$, and every $(L,D)$ combination uniquely defines an aspect ratio $A=L/D$. 
+%We will  investigate $A \in [1,5]$ for concentrations below the isotropic nematic transition.
 
-Inspired by newly synthesised nanometer sized AuNRs designed for biomedical applications, this work presents a comprehensive approach, aimed at developing a simple theoretical tool to quantitatively assess the  effect of  experimental polydispersities over the equilibrium properties of solutions of nanoparticles.  Given the biomedical scope, all realised solutions are diluted, and require a control over the particle self-assembly process. Thus, the in depth comprehension of the effect played by polydispersity on finite concentrations of nanoparticles in solution,  will provide a path towards a more precise design for the synthesis of such a  nanomaterial, as it will evict the main parameters that require control when specific solution properties are foreseen. 
+Effects of polydispersity has been already investigated both experimentally, theoretically 
+and numerically in some cases~\cite{Woolston2015}. 
+Monodisperse hard spherocylinders of length $L$ and diameter $D$ have been studied by
+using computer simulations by Bolhuis and Frenkel~\cite{Bolhuis1997} and by McGrother~\cite{McGrother96}.
+In these studies it has been shown that if elongation $X_0=L/D$ is greater than $\approx 3.7$ 
+on increasing the concentration the following four stable phases can be found: isotropic (I), nematic (N), 
+smectic (Sm), and uniaxial columnar crystal (K). Differently, if elongation is smaller then $3.7$ nematic and smectic 
+are missing. It is known that introducing length polydispersity in a system of HSCs can inhibit the formation of 
+the Smectic phase~\cite{Bates1998}. In Ref.~\cite{Millet2021} effect of length polydispersity has been also addressed, 
+where HSCs are also functionalized with attractive sites.  
+polydisperse 2D hard rectangles have been studied in Ref.~\cite{Armas2017},   
+% TODO AGGIUNGERE REFERENZE DA Woolston2015 e discutere i vari casi studiati mostrando che noi abbiamo
+% fatto una cosa nuova
+% TODO aggiungere referenza di Wensink su polydispersity
 
-For this scope, novel AuNRs are synthesised and their polydispersity is characterised through Trasmission Electron Microscope analyses.
-A computational and theoretical model is thus tailored on the experimental system, to reproduce the polydispersity from the experimental dataset, and to address its impact on the equilibrium properties of the system. The analysis is then generalised into an extensive investigation aimed at unveiling the role played by polydispersity on the low density phase diagram of the system. 
+We will carry out numerical Monte Carlo simulations of HSCs and, building on Onsager theory, we develop a
+theoretical approach to properly account for polydispersity. We calculate theoretically the phase diagram
+with respect to isotropic-nematic transition and we compare it with numerical simulations.
 
-AuNRs are modelled as  hard spherocylindrical colloidal nanoparticles, whose low density phase diagram is then computationally and theoretically investigated,  with particular attention on the effect of polydispersity on the compressibility of all systems. For an extensive exploration, colloids are defined by means of their elongation  $L$ and their diameter $D$, and every $(L,D)$ combination uniquely defines an aspect ratio $A=L/D$. We will  investigate $A \in [1,5]$ for concentrations below the isotropic nematic transition [CITE].
+From our numerical and theoretical study we find that phase behavior can be accurately described by our theoretical approach.
+Moreover, we surprisingly find that phase behavior is mostly affected by diameter polydispersity of particles
+rather than length polydispersity. 
+
+%Our work can be intended as a simple theoretical tool to quantify the effect of experimental polydispersity over
+%the equilibrium properties of solution of elongated nanoparticles.
+%Inspired by newly synthesised nanometer sized AuNRs designed for biomedical applications, this work presents a
+%comprehensive approach, aimed at developing a simple theoretical tool to quantitatively assess the  effect of 
+%experimental polydispersities over the equilibrium properties of solutions of nanoparticles.  
+
+%Given the biomedical scope, all realised solutions are diluted, and require a control over the particle self-assembly process. Thus, the in
+%depth comprehension of the effect played by polydispersity on finite concentrations of nanoparticles in solution,  will
+%provide a path towards a more precise design for the synthesis of such a  nanomaterial, as it will evict the main
+%parameters that require control when specific solution properties are foreseen. 
+
+%For this scope, novel AuNRs are synthesised and their polydispersity is characterised through Trasmission Electron Microscope analyses.
+%A computational and theoretical model is thus tailored on the experimental system, to reproduce the polydispersity from the experimental dataset, and to address its impact on the equilibrium properties of the system. The analysis is then generalised into an extensive investigation aimed at unveiling the role played by polydispersity on the low density phase diagram of the system. 
+
+%AuNRs are modelled as  hard spherocylindrical colloidal nanoparticles, whose low density phase diagram is then computationally and theoretically investigated,  with particular attention on the effect of polydispersity on the compressibility of all systems. For an extensive exploration, colloids are defined by means of their elongation  $L$ and their diameter $D$, and every $(L,D)$ combination uniquely defines an aspect ratio $A=L/D$. We will  investigate $A \in [1,5]$ for concentrations below the isotropic nematic transition [CITE].
 
 %Starting from the monodisperse low density phase diagram,  we develop a set of  theoretical and computational tools to assess how the polidispersity in the aspect ratio of the nanoparticles affects the equilibrium properties of the solutions. 
 
- As in the case of spherical nanoparticles [CITE], we find that, even in the case of anysotropic colloids,  polydispersity enhances packing. 
+% As in the case of spherical nanoparticles [CITE], we find that, even in the case of anysotropic colloids,  polydispersity enhances packing. 
 % %%%%
 % QUESTO NELLE CONCLUSIONI 
- 
+ \
 %To reach a complete understanding of the effect of polydispersity on the local and global properties of the solutions, we compare monodisperse systems with their polydisperse counterparts for a set of $A$. 
 %We then undergo an in depth analysis separating the $L$ and $D$ contributions to the polydisperse $A$ distribution. 
 %Interestingly, the change in compressibility of the polydisperse solution with respect to their monodisperse counterparts, is dominated by the  $D$ polydispersity, while even a $100\%$ polydispersity in $L$ does not change the  equation of state obtained for the monodisperse case. To explain such a phenomenon, we studied both global and local properties of the solutions, introducing global and orientational pair distribution functions. Such analyses showed the emergence of a local alignment between the elongated nanoparticles, even in dilute systems. 
