@@ -132,15 +132,15 @@ Design and synthesis of colloidal particles of various sizes, shapes, morphologi
 % Nanoparticles have seen  important applications in the field of drug delivery [CITA], where functionalised particles can be designed  to release a cargo upon external stimuli, or to attach to specific regions of the cells. Spanning to a completely different field, nanoparticles can be exploited due to their plasmonic resonance [CITA], that has important applications in optoelectronical devices [CITA], or they can be used as a model system  for a variety of complex biological assemblies such as viruses, bacteria or DNA composites [CITA]. 
 
 %FRASE SULLA SHAPE e SU FASI LC
-{\color{green}A particularly interesting class of colloids is constituted by nanoparticles of anisotropic shape, whose
-  phase diagram is enriched by mesophases such as nematic, smectic, uniaxial columnar phases among many other ones.
-  These mesophases emerge in different living systems and has been widely exploited in materials science and
-  biotechnology-  Prominent examples of anistropic colloids are provided by fd-viruses~(Z. Dogic and S. Fraden,
-  Langmuir, 2000, 16, 7820–7824), DNA duplexes~(Mine with Stiakakis 2021), cellulose nanocrystals (P. X. Wang, W. Y.
-  Hamad and M. J. MacLachlan, Nat. Commun., 2016, 7, 11515), polypeptides (XXX), amyloid fibrils (G. Nystrom, M. Arcari
-  and R. Mezzenga, Nat. Nanotechnol., 2018, 13, 330–336), collagen (R. Martin, J. Farjanel, D. Eichenberger, A.
-Colige, E. Kessler, D. J. S. Hulmes and M. M. Giraud-Guille, J. Mol. Biol., 2000, 301, 11–17)} and gold nanorods
-(AuNRs). Latter ones have proven to be extremely successful when
+A particularly interesting class of colloids is constituted by nanoparticles of anisotropic shape, whose 
+phase diagram is enriched by mesophases such as nematic, smectic, uniaxial columnar phases among many other ones.
+These mesophases emerge in different living systems and has been widely exploited in materials science and 
+biotechnology-  Prominent examples of anistropic colloids are provided by fd-viruses~(Z. Dogic and S. Fraden,
+Langmuir, 2000, 16, 7820–7824), DNA duplexes~(Mine with Stiakakis 2021), cellulose nanocrystals (P. X. Wang, W. Y.
+Hamad and M. J. MacLachlan, Nat. Commun., 2016, 7, 11515), polypeptides (XXX), amyloid fibrils (G. Nystrom, M. Arcari
+ and R. Mezzenga, Nat. Nanotechnol., 2018, 13, 330–336), collagen (R. Martin, J. Farjanel, D. Eichenberger, A.
+Colige, E. Kessler, D. J. S. Hulmes and M. M. Giraud-Guille, J. Mol. Biol., 2000, 301, 11–17) and gold nanorods 
+(AuNRs). Latter ones have proven to be extremely successful when 
 medical applications are foreseen, due to their high  biocompatibility and simple 
 and versatile synthesis. 
 
@@ -174,23 +174,27 @@ For an extensive exploration, colloids are defined by means of their elongation 
 %We will  investigate $A \in [1,5]$ for concentrations below the isotropic nematic transition.
 
 Effects of polydispersity has been already investigated both experimentally, theoretically 
-and numerically in some cases~\cite{Woolston2015}. 
+and numerically in some cases. 
 Monodisperse hard spherocylinders of length $L$ and diameter $D$ have been studied by
 using computer simulations by Bolhuis and Frenkel~\cite{Bolhuis1997} and by McGrother~\cite{McGrother96}.
 In these studies it has been shown that if elongation $X_0=L/D$ is greater than $\approx 3.7$ 
 on increasing the concentration the following four stable phases can be found: isotropic (I), nematic (N), 
 smectic (Sm), and uniaxial columnar crystal (K). Differently, if elongation is smaller then $3.7$ nematic and smectic 
-are missing. It is known that introducing length polydispersity in a system of HSCs can inhibit the formation of 
-the Smectic phase~\cite{Bates1998}. In Ref.~\cite{Millet2021} effect of length polydispersity has been also addressed, 
-where HSCs are also functionalized with attractive sites.  
-polydisperse 2D hard rectangles have been studied in Ref.~\cite{Armas2017},   
-% TODO AGGIUNGERE REFERENZE DA Woolston2015 e discutere i vari casi studiati mostrando che noi abbiamo
-% fatto una cosa nuova
-% TODO aggiungere referenza di Wensink su polydispersity
+are missing. 
+Polydispersity can induce profound differences in the phase behavior of HSCs. For example, 
+it is known that introducing length polydispersity in a system of HSCs can inhibit the formation of 
+the Smectic phase~\cite{Bates1998}. Length polydispersity for rod-like particles has been also shown 
+to induce a broadening of the IN coexistence region and fractionation~\cite{Lekkerkerker1984,Speranza2002,Wensink2003}. 
+Some of the theoretical and numerical predictions have been also confirmed by experiments on clay rods~\cite{Woolston2015},
+bohemite syntethic rods~\cite{Buining1993} and tobacco mosaic virus~\cite{Fraden1993} 
+% TODO aggiungere altre referenze sperimentali?
 
-We will carry out numerical Monte Carlo simulations of HSCs and, building on Onsager theory, we develop a
-theoretical approach to properly account for polydispersity. We calculate theoretically the phase diagram
-with respect to isotropic-nematic transition and we compare it with numerical simulations.
+So far, possible role played by diameter polysdispersity has been neglected and in the present 
+paper we want assess its possibile effects on phase behavior.
+We will investigate both theoretically and numerically HSCs polydisperse both in their lenght and diameter.
+We carry out Monte Carlo simulations of HSCs and, building on the works of Speranza and Sollich~\cite{Speranza2002}
+and of Wensink and Vroege~\cite{Wensink2003}, we propose a simple theoretical approach to account for polydispersity. 
+We calculate theoretically the phase diagram with respect to isotropic-nematic transition and we compare it with numerical simulations.
 
 From our numerical and theoretical study we find that phase behavior can be accurately described by our theoretical approach.
 Moreover, we surprisingly find that phase behavior is mostly affected by diameter polydispersity of particles
