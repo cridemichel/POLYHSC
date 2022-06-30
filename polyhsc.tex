@@ -203,109 +203,128 @@ where the first term is ideal gas contribution and the second one is an excess c
 
 where
 \begin{equation}
-  F^\mathrm{id} = \int d\Omega dL dD \rho(\Omega,L,D) \left [\ln(\rho(\Omega,L,D) \overline{v_0}) - 1 \right]
+  F_{id} = \int d\Omega dL dD \rho(\Omega,L,D) \left [\ln(\rho(\Omega,L,D) \overline{v_0}) - 1 \right]
 \end{equation}
 
 and 
 \begin{equation}
-  F^\mathrm{excl} = \int d\Omega dL dD\Omega' dL' dD' v_{excl}(\Omega,L,D,\Omega',L',D') \rho(\Omega,L,D) \rho(\Omega',L',D')
+  F_\mathrm{ex} = \int d\Omega_1 dL_1 dD_2\Omega_2 dL_2 dD_2 \, v_{excl}(\Omega_1,L_1,D_1,\Omega_2,L_2,D_2) \tilde\rho(\Omega_1,L_1,D_1) 
+  \tilde\rho(\Omega_2,L_2,D_2)
 \end{equation}
 
 Differently from Refs.~\cite{Speranza2002,Wensink2003}, we assume that the density distribution
-$\rho(l,\Omega)$ can be written as follows:
+$\rho(L, D, \Omega)$ can be written as follows:
 \begin{equation}
-\rho(l,\Omega) = \rho(L,D) f(\alpha(L,D), \Omega)
+\tilde\rho(\Omega, L, D) = \rho(L,D) f(\alpha(L,D), \Omega)
 \end{equation}
-where $f(\alpha,\Omega)$ is the  Onsager orientational distribution function \cite{onsager1949effects}, i.e.
+where $f(\alpha,\Omega)$ is the orientational distribution function which will be equal to $1/4\pi$ in the isotropic phase and 
+to Onsager function in the nematic phase, i.e.:
 \begin{equation}
-	f(\Omega) = \frac{\alpha}{4 \pi \sinh \alpha} \cosh(\alpha \cos \theta)
+	f(\alpha,\Omega) = \frac{\alpha}{4 \pi \sinh \alpha} \cosh(\alpha \cos \theta)
 \end{equation}
-
 where $\theta$ is the angle between the particle and the nematic axis and $\alpha$ is a non-negative parameter that quantifies the alignment of the system.
 
 We further assume that $\alpha(L,D)=\alpha$, i.e.~it does not depend on particle size.
 According to these assumption the ideal gas contribution to free energy becomes:
 \begin{equation}
-  F^\mathrm{id} =  \rho(L,D) \left[\ln(\rho(L,D)\overline{v_0}) - 1\right ] + \frac{\phi}{\overline{v_0}} \, 
+  F_\mathrm{id} =  \rho(L,D) \left[\ln(\rho(L,D)\overline{v_0}) - 1\right ] + \frac{\phi}{\overline{v_0}} \, 
   \int \, d\Omega f(\alpha,\Omega) \ln(4 \pi f(\alpha,\Omega))
 \end{equation}
 %TODO sono arrivato qui
-To estimate the excess term, we make use of the Parson-Lee approach for the excluded volume term [citazioni] that extends Onsager's work \cite{onsager1949effects} by including high-body terms of the virial expansion. Within such an approximation, the excess free energy becomes 
+To estimate the excess term, we make also use of the Parson-Lee approach for the excluded volume term \cite{Parson} that extends Onsager's work \cite{onsager1949effects} by including high-body terms of the virial expansion. Within such an approximation, the excess free energy becomes 
 
 \begin{equation}
-\frac{\beta F^{excl}}{V} = \frac{1}{2} \, \eta(\phi) \, \overline{v_\mathrm{excl}}  \left( \frac{\phi}{\overline{v_0}} \right)^2
+  \frac{\beta F_{ex}}{V} = \frac{1}{2} \, \eta(\phi) \, \overline{v}_\mathrm{excl}  \left( \frac{\phi}{\overline{v}_0} \right)^2
 \end{equation}
 
 %	\iint v_\mathrm{excl}(\gamma[\Omega_1, \Omega_2]) f(\Omega_1)f(\Omega_2) d\Omega_1 d\Omega_2 
 
-where $\eta(\phi) = \frac{1}{4} \frac{4 - 3\phi}{(1 - \phi)^2}$ is the Parson-lee factor, $\overline{v_\mathrm{excl}}$ is the mean excluded volume of the particles in the system.
-
-\begin{comment}
-	is the mutual excluded volume between two spherocylinders with respective orientations $\Omega_1$ and $\Omega_2$, $f(\Omega)$ is the orientational distribution function, and $\overline{v_0}$ is the average volume of the particles in the system.
-	
-	The total free energy per particle is thus:
-	\begin{equation}
-		\frac{\beta F}{N} = \ln(\Lambda^3 \rho) - 1 + \int f(\Omega) \ln(4 \pi f(\Omega)) d \Omega + \frac{\phi \, \eta(\phi)}{2 \, \overline{v_{0}}} \iint v_\mathrm{excl} (\Omega_1, \Omega_2) f(\Omega_1)f(\Omega_2) d\Omega_1 d\Omega_2
-	\end{equation}
-	
-	where $\Lambda$ is the de Broglie thermal wavelength and $\rho = N/V$ is the number density. The integral over the last term represents the average excluded volume $\overline{v_\mathrm{excl}}$ between the particles in the system, and depends on the size distribution of the particles in the system and on their mutual orientation.
-	
-	The reduced pressure $P^*$ of the system can be obtained from the free energy as:
-	
-	\begin{equation}
-		P^* =  P^*_\mathrm{id} - \beta \, \overline{v_0} \frac{\partial F_\mathrm{excl}}{\partial V} \rvert _{N, T}  = \phi - N \beta \, \overline{v_0} \frac{\overline{v_\mathrm{excl}}}{8 \, \overline{v_0}} \frac{\partial}{\partial V} \left( \phi \frac{4 - 3 \phi}{(1 - \phi)^2} \right) \nonumber = \phi + \frac{\overline{v_\mathrm{excl}}}{4 \, \overline{v_0}} \phi^2 \frac{2 - \phi}{(1 - \phi)^3} \label{ParsonLee}
-	\end{equation}
-	
-	where $\tilde{v} = \overline{v_\mathrm{excl}} / \overline{v_0}$ represents the deviation from the ideal gas behaviour.
-\end{comment}
-
-
-
-\subsection{Average particle volume and excluded volume}
-
-In order to obtain the free energy of the system we have to assess the mean particle volume $\overline{v_0}$ and the average excluded volume of the system $\overline{v_\mathrm{excl}}$. The former is quite simple to calculate, it depends solely on the size distribution ($\rho(L)$ and $\rho(D)$) of the particles in the system:
+where $\eta(\phi) = \frac{1}{4} \frac{4 - 3\phi}{(1 - \phi)^2}$ is the Parson-lee factor, 
+$\overline{v_0}$ is the mean particle volume, i.e.
+\begin{equation}
+\overline{v}_0 = \int dL dD \rho(L,D) v_0(L, D)
+\end{equation}
+with $v_0(L, D) = \frac{\pi D^3}{6} + \frac{\pi D^2 L}{4}$, 
+and 
+$\overline{v_\mathrm{excl}}$ is the mean excluded volume of the particles in the system, i.e.
 
 \begin{equation}
-	\overline{v_0} = \iint dL dD \rho(L) \rho(D) v_0(L, D)
-\end{equation}
-
-where $v_0(L, D) = \frac{\pi D^3}{6} + \frac{\pi D^2 L}{4}$ is the volume of a single particle of the system.
-
-The latter, instead, is more difficult to evaluate due to its dependency on the liquid crystalline phase considered. As a matter of fact, the mutual excluded volume of two spherocylinders of length $(L_1, L_2)$ and diameter $(D_1, D_2)$ is a function of the angle $\gamma[\Omega_1, \Omega_2]$ between their main axes \cite{onsager1949effects}:
-
-
+\overline{v}_\mathrm{excl}(\Omega_1, \Omega_2) = \int d\Omega_1 d\Omega_2 dL_1 dL_2 dD_1 dD_2\, \rho_1\, \rho_2\; v_\mathrm{excl}(L_1, L_2, D_1, D_2, \Omega_1, \Omega_2) 
+ \end{equation}
+being $v_\mathrm{excl}$ the excluded volume between two spherocylinders of given shape and orientation, $\tilde\rho_1=\rho(L_1,D_1) f(\alpha,\Omega_2)$ and
+$\tilde\rho_2=\rho(L_2, D_2) f(\alpha,\Omega_2)$.
+In the theoretical calculations, we employ the expression provided by Onsager~\cite{onsager1949effects} for $v_\mathrm{excl}$, i.e.
 
 \begin{multline} \label{eq:vexcl}
-	v_\mathrm{excl}(L_1, D_1, L_2, D_2, \gamma[\Omega_1, \Omega_2]) = \frac{4}{3} \pi \left(\frac{D_1 + D_2}{2}\right)^3 + \\ + \pi \left(\frac{D_1 + D_2}{2}\right)^2 (L_1 + L_2) + 2 \left( \frac{D_1 + D_2}{2} \right) L_1 L_2 \sin(\gamma)
+	v_\mathrm{excl}(L_1, D_1, L_2, D_2, \Omega_1, \Omega_2) = \frac{4}{3} \pi \left(\frac{D_1 + D_2}{2}\right)^3 + \\ + \pi \left(\frac{D_1 + D_2}{2}\right)^2 (L_1 + L_2) + 2 \left( \frac{D_1 + D_2}{2} \right) L_1 L_2 \sin(\gamma)
 \end{multline}
 
-Firstly, we can average on the polydispersity of the system
+where $\gamma=\gamma(\Omega_1,\Omega_2)$ is the angle between the symmetry axes of the two spherocylinders with orientations $\Omega_1$ and $\Omega_2$.
 
- \begin{equation}
- 	\overline{v_\mathrm{excl}}(\gamma[\Omega_1, \Omega_2]) = \iiiint dL_1 dL_2 dD_1 dD_2 \rho(L_1) \rho(L_2) \rho(D_1) \rho(D_2) \overline{v_\mathrm{excl}}(L_1, L_2, D_1, D_2, \gamma[\Omega_1, \Omega_2])
- \end{equation}
-
-then the average excluded volume of the system can be calculated by integrating over $\Omega_1$ and $\Omega_2$:
-
-\begin{equation}
-	\overline{v_\mathrm{excl}}  = \iint d\Omega_1 d\Omega_2 \, v_\mathrm{excl}(\gamma[\Omega_1, \Omega_2]) f(\Omega_1)f(\Omega_2)  
-\end{equation}
-
-While for the nematic phase the excluded volume depends on the mean alignment of the particles in the system, in the isotropic phase there is no long-range orientational correlation. In this case, $\alpha = 0$ and $f(\Omega_1) = f(\Omega_2) = 1 / (4 \pi)$, thus the integral over the solid angles $\Omega_1$ and $\Omega_2$ of the last term of Eq. \ref{eq:vexcl} gives
-
-\begin{equation}
-	\iint \sin{\left(\gamma[\Omega_1, \Omega_2]\right) f(\Omega_1) f(\Omega_2) d\Omega_1 d\Omega_2 =4 \pi^3} \frac{1}{16 \pi^2} = \frac{\pi}{4}
-\end{equation}
-
-Below the I-N transition, then, it is possible to rapidly evaluate the EOS of a system of polydisperse hard spherocylinders as:
-
-\begin{equation}
-	P^* =  - \beta \, \overline{v_0} \frac{\partial F}{\partial V} \Bigg \rvert _{N, T} = \phi + \frac{1}{4} \tilde{v} \phi^2 \frac{2 - \phi}{(1 - \phi)^3} \label{ParsonLee}
-\end{equation}
-
-where $\tilde{v} = \frac{\overline{v_\mathrm{excl}}}{\overline{v_0}}$ quantifies the deviation to the ideal gas behaviour.
+% \begin{comment}
+%         is the mutual excluded volume between two spherocyl\inders with respective orientations $\Omega_1$ and $\Omega_2$, $f(\Omega)$ is the orientational distribution function, and $\overline{v_0}$ is the average volume of the particles in the system.
+	
+%         The total free energy per particle is thus:
+%         \begin{equation}
+%                 \frac{\beta F}{N} = \ln(\Lambda^3 \rho) - 1 + \int f(\Omega) \ln(4 \pi f(\Omega)) d \Omega + \frac{\phi \, \eta(\phi)}{2 \, \overline{v_{0}}} \iint v_\mathrm{excl} (\Omega_1, \Omega_2) f(\Omega_1)f(\Omega_2) d\Omega_1 d\Omega_2
+%         \end{equation}
+	
+%         where $\Lambda$ is the de Broglie thermal wavelength and $\rho = N/V$ is the number density. The integral over the last term represents the average excluded volume $\overline{v_\mathrm{excl}}$ between the particles in the system, and depends on the size distribution of the particles in the system and on their mutual orientation.
+% \	
+%         The reduced pressure $P^*$ of the system can be obtained from the free energy as:
+	
+%         \begin{equation}
+%                 P^* =  P^*_\mathrm{id} - \beta \, \overline{v_0} \frac{\partial F_\mathrm{excl}}{\partial V} \rvert _{N, T}  = \phi - N \beta \, \overline{v_0} \frac{\overline{v_\mathrm{excl}}}{8 \, \overline{v_0}} \frac{\partial}{\partial V} \left( \phi \frac{4 - 3 \phi}{(1 - \phi)^2} \right) \nonumber = \phi + \frac{\overline{v_\mathrm{excl}}}{4 \, \overline{v_0}} \phi^2 \frac{2 - \phi}{(1 - \phi)^3} \label{ParsonLee}
+%         \end{equation}
+	
+%         where $\tilde{v} = \overline{v_\mathrm{excl}} / \overline{v_0}$ represents the deviation from the ideal gas behaviour.
+% \end{comment}
 
 
+
+%\subsection{Average particle volume and excluded volume}
+
+% In order to obtain the free energy of the system we have to assess the mean particle volume $\overline{v_0}$ and the average excluded volume of the system $\overline{v_\mathrm{excl}}$. The former is quite simple to calculate, it depends solely on the size distribution ($\rho(L)$ and $\rho(D)$) of the particles in the system:
+
+% where $v_0(L, D) = \frac{\pi D^3}{6} + \frac{\pi D^2 L}{4}$ is the volume of a single particle of the system.
+
+% The latter, instead, is more difficult to evaluate due to its dependency on the liquid crystalline phase considered. As a matter of fact, the mutual excluded volume of two spherocylinders of length $(L_1, L_2)$ and diameter $(D_1, D_2)$ is a function of the angle $\gamma[\Omega_1, \Omega_2]$ between their main axes \cite{onsager1949effects}:
+
+
+
+% \begin{multline} \label{eq:vexcl}
+%         v_\mathrm{excl}(L_1, D_1, L_2, D_2, \gamma[\Omega_1, \Omega_2]) = \frac{4}{3} \pi \left(\frac{D_1 + D_2}{2}\right)^3 + \\ + \pi \left(\frac{D_1 + D_2}{2}\right)^2 (L_1 + L_2) + 2 \left( \frac{D_1 + D_2}{2} \right) L_1 L_2 \sin(\gamma)
+% \end{multline}
+
+% Firstly, we can average on the polydispersity of the system
+
+%  \begin{equation}
+%          \overline{v_\mathrm{excl}}(\gamma[\Omega_1, \Omega_2]) = \iiiint dL_1 dL_2 dD_1 dD_2 \rho(L_1) \rho(L_2) \rho(D_1) \rho(D_2) \overline{v_\mathrm{excl}}(L_1, L_2, D_1, D_2, \gamma[\Omega_1, \Omega_2])
+%  \end{equation}
+
+% then the average excluded volume of the system can be calculated by integrating over $\Omega_1$ and $\Omega_2$:
+
+% \begin{equation}
+%         \overline{v_\mathrm{excl}}  = \iint d\Omega_1 d\Omega_2 \, v_\mathrm{excl}(\gamma[\Omega_1, \Omega_2]) f(\Omega_1)f(\Omega_2)  
+% \end{equation}
+
+% While for the nematic phase the excluded volume depends on the mean alignment of the particles in the system, in the isotropic phase there is no long-range orientational correlation. In this case, $\alpha = 0$ and $f(\Omega_1) = f(\Omega_2) = 1 / (4 \pi)$, thus the integral over the solid angles $\Omega_1$ and $\Omega_2$ of the last term of Eq. \ref{eq:vexcl} gives
+
+% \begin{equation}
+%         \iint \sin{\left(\gamma[\Omega_1, \Omega_2]\right) f(\Omega_1) f(\Omega_2) d\Omega_1 d\Omega_2 =4 \pi^3} \frac{1}{16 \pi^2} = \frac{\pi}{4}
+% \end{equation}
+
+% Below the I-N transition, then, it is possible to rapidly evaluate the EOS of a system of polydisperse hard spherocylinders as:
+
+% \begin{equation}
+%         P^* =  - \beta \, \overline{v_0} \frac{\partial F}{\partial V} \Bigg \rvert _{N, T} = \phi + \frac{1}{4} \tilde{v} \phi^2 \frac{2 - \phi}{(1 - \phi)^3} \label{ParsonLee}
+% \end{equation}
+
+% where $\tilde{v} = \frac{\overline{v_\mathrm{excl}}}{\overline{v_0}}$ quantifies the deviation to the ideal gas behaviour.
+
+\subsection{Coexistence}
+
+{\bf Provide here details on theoretical calculations of phase boundaries}
 
 \subsection{The system}
 Motivated by the typical polydispersity affecting experimental anysotropic nanoparticles,  the main goal  of this paper is unveiling the effect of such an unavoidable property  on the phase diagram of hard non functionalised spherycylindrical nanoparticles (NPs). Synthetic,  biological  and natural nanoparticles, are in fact all characterised by a given size distribution. This paper focuses on equilibrium properties of anysotropic nanoparticles. In particular we aim at unveiling the role played by polydispersity on the equation of state of spherocylindrical particles. Anysotropic nanoparticles are described by means of two main axis; the dominant one, 
